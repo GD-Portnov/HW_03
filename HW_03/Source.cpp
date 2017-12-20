@@ -1,4 +1,4 @@
-//
+﻿//
 //
 
 #include<iostream>
@@ -6,41 +6,43 @@
 
 int main()
 {
-	int number=2;
-	bool simple = true;
-	for (; number < 1000; number++)
-	{
-		for (int i = 2; i < std::sqrt(number); i++)
-		{
-			if (number%i == 0)
-			{
-				simple = false;
-				break;
-			}
-		}
-		if (simple)
-			std::cout << number << std::endl;
-	}
 
+
+	//for (int number = 2; number < 1000; ++number)
+	//{
+	//	bool simple = true;
+	//	for (int i = 2; i < std::sqrt(number)+1; ++i)
+	//		if (number%i == 0)
+	//		{
+	//			simple = false;
+	//			break;
+	//		}
+	//	
+	//	if (simple)
+	//		std::cout << number << std::endl;
+	//}
+
+	int height, width = 0;
+	std::cout << "Enter height:\n";
+	std::cin >> height;
+	std::cout << "Enter width:\n";
+	std::cin >> width;
+	int i;
+	for (i = 0; i < height; i++)
+	{
+		for (int j = 0; j < width; j++)
+			{
+			if ((i != 0) && (i != height - 1) && (j != 0) && (j != width - 1))
+				std::cout << " ";
+			else
+			std::cout << "%";
+			}
+		
+
+		std::cout << "\n";
+	}
 
 
 	system("pause");
 	return 0;
 }
-//using namespace std;
-//int main() {
-//	bool prime;
-//	for (int i = 2; i<1000; i++) {
-//		prime = true;
-//		double sqrti = sqrt((double)i);
-//		for (int j = 2; j<sqrti + 1; j++)
-//			if (i%j == 0) {
-//				prime = false;
-//				break;
-//			}
-//		if (prime) cout << i <<;
-//	}
-//	
-//	system("pause");
-//	return 0;
-//}
