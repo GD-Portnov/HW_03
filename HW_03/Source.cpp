@@ -17,23 +17,24 @@ int main()
 
 		case 1:
 		{
+			int cntr = 1;
 			for (int number = 2; number < 1000; ++number)
 			{
-				for (int j = 0; j < 10; j++)
-				{
-					bool simple = true;
-					for (int i = 2; i < std::sqrt(number) + 1; ++i)
-						if (number%i == 0)
-						{
-							simple = false;
-							break;
-						}
+				bool simple = true;
+				for (int i = 2; i < std::sqrt(number) + 1; ++i)
+					if (number%i == 0)
+					{
+						simple = false;
+						break;
+					}
 
-					if (simple)
-						std::cout << number << "\t";
+				if (simple)
+				{
+					cntr++;
+					std::cout << number << "\t";
 				}
-				std::cout << std::endl;
 			}
+			std::cout << std::endl;
 		}
 		break;
 
